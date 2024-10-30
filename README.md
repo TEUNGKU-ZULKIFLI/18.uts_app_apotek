@@ -21,7 +21,6 @@ Selamat mengelola, dan semoga apotekmu makin maju! Ingat, "Obat adalah teman, pa
 
 Jangan lupa, saat kamu berhasil mengelola apotekmu dengan aplikasi ini, bagikan kisah suksesmu agar orang lain juga terinspirasi! Siapa tahu, bisa jadi dokter atau suster terkenal berikutnya! 😉
 
-#SHOWCASE
 # SHOWCASE
 <div align="center">
   <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.1.png" width="200px"/>
@@ -41,3 +40,7 @@ Jangan lupa, saat kamu berhasil mengelola apotekmu dengan aplikasi ini, bagikan 
   <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.15.png" width="200px"/>
   <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.16.png" width="200px"/>
 </div>
+
+# COMPONENT 💾 YANG DI PERLUKAN
+- **PEMBUATAN SEBUAH FODER DI HTDOCK:** https://drive.google.com/file/d/1VPnh88FM_wlDLBBQyupmCOjVafUJhxGn/view
+- **PEMBUATAN TABLE DI DATABASE:** 
