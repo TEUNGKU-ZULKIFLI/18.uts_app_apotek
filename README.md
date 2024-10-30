@@ -43,4 +43,4 @@ Jangan lupa, saat kamu berhasil mengelola apotekmu dengan aplikasi ini, bagikan 
 
 # COMPONENT 💾 YANG DI PERLUKAN
 - **PEMBUATAN SEBUAH FODER DI HTDOCK:** https://drive.google.com/file/d/1VPnh88FM_wlDLBBQyupmCOjVafUJhxGn/view
-- **PEMBUATAN TABLE DI DATABASE:** 
+- **PEMBUATAN TABLE DI DATABASE:** https://drive.google.com/file/d/1VgDnDtwf-hi2iib9I9mmSHwbJZq577wa/view
