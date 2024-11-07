@@ -2,18 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'edit.dart';
 
-class DetailObatScreen extends StatelessWidget {
-  final String kode_obat;
-  final String nama_obat;
-  final String stock;
-  final String tgl_kadaluarsa;
+class DetailPemasokScreen extends StatelessWidget {
+  final Map<String, dynamic> pemasok;
 
-  DetailObatScreen({
-    required this.kode_obat,
-    required this.nama_obat,
-    required this.stock,
-    required this.tgl_kadaluarsa,
-  });
+  const DetailPemasokScreen({super.key, required this.pemasok});
+
+  Future<void> deletePemasok(BuildContext context) async {
+    final response = await http.post(
+      Uri.parse(
+          'http://localhost:8080/api_apotek/pemasok_obat/delete_pemasok_obat.php'),
+      body: {
+        'kode_perusahaan': pemasok['kode_perusahaan'].toString(),
+      },
+    );
+
+    if (response.statusCode == 200) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Pemasok berhasil dihapus')),
+      );
+      Navigator.pop(context); // Kembali ke halaman sebelumnya
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Gagal menghapus pemasok')),
+      );
+    }
+  }
 
   void _showDeleteConfirmationDialog(BuildContext context) {
     showDialog(
@@ -21,7 +34,7 @@ class DetailObatScreen extends StatelessWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Konfirmasi'),
-          content: const Text('Apakah Anda yakin ingin menghapus item ini?'),
+          content: const Text('Apakah Anda yakin ingin menghapus pemasok ini?'),
           actions: <Widget>[
             TextButton(
               child: const Text('Batal',
@@ -35,7 +48,7 @@ class DetailObatScreen extends StatelessWidget {
                   style: TextStyle(color: Colors.redAccent)),
               onPressed: () {
                 Navigator.of(context).pop();
-                _deleteObat(context);
+                deletePemasok(context); // Hapus pemasok
               },
             ),
           ],
@@ -44,31 +57,12 @@ class DetailObatScreen extends StatelessWidget {
     );
   }
 
-  Future<void> _deleteObat(BuildContext context) async {
-    final response = await http.post(
-      Uri.parse(
-          'http://localhost:8080/api_apotek/daftar_obat/delete_daftar_obat.php'),
-      body: {'kode_obat': kode_obat},
-    );
-
-    if (response.statusCode == 200) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Data berhasil dihapus')),
-      );
-      Navigator.pop(context);
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Gagal menghapus data')),
-      );
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Detail Obat', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.teal[400]!,
+        title: Text('Detail Pemasok', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.lightBlue[400],
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -82,15 +76,20 @@ class DetailObatScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Detail Obat',
+                Text('Detail Pemasok',
                     style:
                         TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
                 SizedBox(height: 20),
-                Text('Nama Obat: $nama_obat', style: TextStyle(fontSize: 18)),
+                Text('Nama Perusahaan: ${pemasok['nama_perusahaan']}',
+                    style: TextStyle(fontSize: 18)),
                 SizedBox(height: 10),
-                Text('Stock: $stock', style: TextStyle(fontSize: 18)),
+                Text('Alamat Perusahaan: ${pemasok['alamat_perusahaan']}',
+                    style: TextStyle(fontSize: 18)),
                 SizedBox(height: 10),
-                Text('Tanggal Kadaluarsa: $tgl_kadaluarsa',
+                Text('Email: ${pemasok['email']}',
+                    style: TextStyle(fontSize: 18)),
+                SizedBox(height: 10),
+                Text('No Kontak: ${pemasok['no_kontak']}',
                     style: TextStyle(fontSize: 18)),
                 SizedBox(height: 20),
                 Row(
@@ -98,7 +97,7 @@ class DetailObatScreen extends StatelessWidget {
                   children: [
                     ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.teal[400]!,
+                        backgroundColor: Colors.lightBlue[400],
                       ),
                       icon: Icon(Icons.edit),
                       label: Text('Edit'),
@@ -106,12 +105,8 @@ class DetailObatScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => EditObatScreen(
-                              kode_obat: kode_obat,
-                              nama_obat: nama_obat,
-                              stock: stock,
-                              tgl_kadaluarsa: tgl_kadaluarsa,
-                            ),
+                            builder: (context) =>
+                                EditPemasokScreen(pemasok: pemasok),
                           ),
                         );
                       },

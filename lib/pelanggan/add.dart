@@ -67,12 +67,12 @@ class _AddPelangganScreenState extends State<AddPelangganScreen> {
     return InputDecoration(
       labelText: labelText,
       labelStyle: TextStyle(color: Colors.black),
-      prefixIcon: Icon(icon, color: Colors.greenAccent),
+      prefixIcon: Icon(icon, color: Colors.greenAccent[400]!),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.greenAccent),
+        borderSide: BorderSide(color: Colors.greenAccent[400]!),
         borderRadius: BorderRadius.circular(10),
       ),
       enabledBorder: OutlineInputBorder(
@@ -87,7 +87,7 @@ class _AddPelangganScreenState extends State<AddPelangganScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Tambah Pelanggan', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.greenAccent[400]!,
         elevation: 0,
       ),
       body: Padding(
@@ -117,7 +117,7 @@ class _AddPelangganScreenState extends State<AddPelangganScreen> {
                 icon: Icon(Icons.save),
                 label: Text('Simpan'),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
+                  backgroundColor: Colors.greenAccent[400]!,
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),

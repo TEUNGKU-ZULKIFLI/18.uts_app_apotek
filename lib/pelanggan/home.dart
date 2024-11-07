@@ -50,18 +50,18 @@ class _PelangganHomeState extends State<PelangganHome> {
           'DATA PELANGGAN 👤',
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.greenAccent[400]!,
         elevation: 0,
       ),
       body: isLoading
           ? Center(
-              child: CircularProgressIndicator(color: Colors.greenAccent),
+              child: CircularProgressIndicator(color: Colors.greenAccent[400]!),
             )
           : ListView.builder(
               itemCount: pelangganList.length,
               itemBuilder: (context, index) {
                 return Card(
-                  color: Colors.greenAccent.shade100,
+                  color: Colors.greenAccent[400]!,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
@@ -71,8 +71,8 @@ class _PelangganHomeState extends State<PelangganHome> {
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 10, horizontal: 16),
                     leading: CircleAvatar(
-                      backgroundColor: Colors.greenAccent[700],
-                      child: Icon(Icons.person, color: Colors.white),
+                      backgroundColor: Colors.white,
+                      child: Icon(Icons.person, color: Colors.black),
                     ),
                     title: Text(
                       pelangganList[index]['nama'],
@@ -103,7 +103,7 @@ class _PelangganHomeState extends State<PelangganHome> {
               },
             ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.greenAccent[400]!,
         child: Icon(Icons.add, color: Colors.white),
         onPressed: () {
           Navigator.push(

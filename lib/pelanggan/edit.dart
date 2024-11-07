@@ -83,11 +83,11 @@ class _EditPelangganScreenState extends State<EditPelangganScreen> {
         borderRadius: BorderRadius.circular(10),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.greenAccent),
+        borderSide: BorderSide(color: Colors.greenAccent[400]!),
         borderRadius: BorderRadius.circular(10),
       ),
       enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.greenAccent),
+        borderSide: BorderSide(color: Colors.greenAccent[400]!),
         borderRadius: BorderRadius.circular(10),
       ),
     );
@@ -98,7 +98,7 @@ class _EditPelangganScreenState extends State<EditPelangganScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Edit Pelanggan'),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.greenAccent[400]!,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -142,7 +142,7 @@ class _EditPelangganScreenState extends State<EditPelangganScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
+                  backgroundColor: Colors.greenAccent[400]!,
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 ),
                 onPressed: _updatePelanggan,

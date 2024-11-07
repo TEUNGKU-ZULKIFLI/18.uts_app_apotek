@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:uts_app_apotek/pemasok_obat/home.dart';
+import 'stock_obat_in_out/home.dart';
 import 'pelanggan/home.dart';
 import 'staf_apotek/home.dart';
 import 'daftar_obat/home.dart';
+import 'stock_obat_view_search/home.dart';
 
 void main() {
   runApp(MyApp());
@@ -84,6 +87,42 @@ class MainMenu extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => StafHome()),
+                );
+              },
+            ),
+            _buildMenuCard(
+              context,
+              icon: Icons.location_city_outlined,
+              title: 'Pemasok Obat',
+              color: Colors.lightBlue[400]!,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => PemasokObatHome()),
+                );
+              },
+            ),
+            _buildMenuCard(
+              context,
+              icon: Icons.medical_information_sharp,
+              title: 'Stock Obat',
+              color: Colors.redAccent[400]!,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StockObatHome()),
+                );
+              },
+            ),
+            _buildMenuCard(
+              context,
+              icon: Icons.manage_search,
+              title: 'Search & View Stock Obat',
+              color: Colors.purpleAccent[400]!,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => StockObatViewHome()),
                 );
               },
             ),

@@ -79,7 +79,7 @@ class DetailStafScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Detail Staf', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.lightGreen[400]!,
         elevation: 0,
       ),
       body: Padding(
@@ -125,7 +125,7 @@ class DetailStafScreen extends StatelessWidget {
                       },
                       child: Text('Edit'),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.greenAccent,
+                        backgroundColor: Colors.lightGreen[400]!,
                         padding:
                             EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                         shape: RoundedRectangleBorder(

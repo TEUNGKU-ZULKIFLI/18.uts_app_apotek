@@ -48,16 +48,16 @@ class _DaftarObatHomeState extends State<DaftarObatHome> {
       appBar: AppBar(
         title: Text('DAFTAR OBAT 💊',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.teal[400]!,
         elevation: 0,
       ),
       body: isLoading
-          ? Center(child: CircularProgressIndicator(color: Colors.greenAccent))
+          ? Center(child: CircularProgressIndicator(color: Colors.teal[400]!))
           : ListView.builder(
               itemCount: daftarObatList.length,
               itemBuilder: (context, index) {
                 return Card(
-                  color: Colors.greenAccent.shade100,
+                  color: Colors.teal[400]!,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
@@ -67,8 +67,9 @@ class _DaftarObatHomeState extends State<DaftarObatHome> {
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 10, horizontal: 16),
                     leading: CircleAvatar(
-                      backgroundColor: Colors.greenAccent[700],
-                      child: Icon(Icons.medical_services, color: Colors.white),
+                      backgroundColor: Colors.white,
+                      child:
+                          Icon(Icons.medical_services, color: Colors.black87),
                     ),
                     title: Text(
                       daftarObatList[index]['nama_obat'],
@@ -105,7 +106,7 @@ class _DaftarObatHomeState extends State<DaftarObatHome> {
               },
             ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.teal[400]!,
         child: Icon(Icons.add, color: Colors.white),
         onPressed: () {
           Navigator.push(

@@ -44,3 +44,33 @@ Jangan lupa, saat kamu berhasil mengelola apotekmu dengan aplikasi ini, bagikan 
 # COMPONENT 💾 YANG DI PERLUKAN
 - **PEMBUATAN SEBUAH FODER DI HTDOCK:** https://drive.google.com/file/d/1VPnh88FM_wlDLBBQyupmCOjVafUJhxGn/view
 - **PEMBUATAN TABLE DI DATABASE:** https://drive.google.com/file/d/1VgDnDtwf-hi2iib9I9mmSHwbJZq577wa/view
+
+---
+
+# PENAMBAHAN 3 FITUR
+- **Pemasok Obat**: Udah kayak nyari jodoh, fitur ini bikin kamu bisa cari tahu pemasok yang selalu “stand by” buat ngisi apotek kamu. Tinggal catat siapa yang ngasih “suplemen cinta” ke rak obat kamu dan pastikan apotek gak pernah kehabisan stok! Jadi kalau butuh pemasok yang setia, tinggal klik-klik, dan kamu bisa tahu siapa yang ngasih “obat cinta” untuk pasien-pasien tercinta kamu 😘.
+
+- **Stok Obat Masuk - Keluar**: Siapa yang ngambil? Siapa yang masukin? Semuanya bisa kamu track di sini! Fitur ini cocok buat kamu yang pengen apoteknya rapi kayak apotek-apotek di film. Mau cek obat masuk atau keluar? Tenang aja, semua data tercatat rapi kayak cerita asmara yang sempurna (tapi sayangnya kadang lebih sempurna dari asmara asli 😅). Jadi, siap-siaplah jadi apoteker detektif dengan fitur ini, nyari tahu mana obat yang sering “keluar” dari rak! 💼🔍
+
+- **Lihat Stok Obat**: Jangan sampai ada pasien kecewa cuma gara-gara obatnya “kehabisan.” Dengan fitur ini, kamu bisa jadi apoteker yang selalu siaga – langsung cek sisa stok obat di rak tanpa drama. Jadi, kapan aja ada yang nanya, “Masih ada paracetamol, nggak?” atau “Ada obat tidur nggak?” langsung cek aja di sini, biar gak ada yang susah tidur mikirin stok obat 🤣.
+
+# SHOWCASE V.2
+<div align="center">
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.17.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.18.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.19.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.20.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.21.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.22.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.23.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.24.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.25.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.26.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.27.png" width="200px"/>
+</div>
+
+# COMPONENT 💾 YANG DI PERLUKAN V.2
+- **PEMBARUAN SEBUAH FOLDER DIHTDOCK:** https://drive.google.com/file/d/1zhv4P9EXxf5V0u6CcWaGkst6FBe4DCZK/view
+- **PENBARUAN TABLE DI DATABASE:** https://drive.google.com/file/d/1vfCqsOi5hcH142lH616_t3581IpccRNq/view
+
+---

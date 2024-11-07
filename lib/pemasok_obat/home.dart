@@ -1,30 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
 import 'add.dart';
 import 'detail.dart';
-import 'dart:convert';
 
-class StafHome extends StatefulWidget {
+class PemasokObatHome extends StatefulWidget {
+  const PemasokObatHome({super.key});
+
   @override
-  _StafHomeState createState() => _StafHomeState();
+  State<PemasokObatHome> createState() => _PemasokObatHomeState();
 }
 
-class _StafHomeState extends State<StafHome> {
-  List stafList = [];
+class _PemasokObatHomeState extends State<PemasokObatHome> {
+  List pemasokList = [];
   bool isLoading = true;
 
-  Future<void> fetchStaf() async {
+  @override
+  void initState() {
+    super.initState();
+    fetchPemasok();
+  }
+
+  Future<void> fetchPemasok() async {
     try {
       final response = await http.get(Uri.parse(
-          'http://localhost:8080/api_apotek/staf_apotek/get_staf.php'));
+          'http://localhost:8080/api_apotek/pemasok_obat/get_pemasok_obat.php'));
 
       if (response.statusCode == 200) {
         setState(() {
-          stafList = json.decode(response.body);
+          pemasokList = json.decode(response.body);
           isLoading = false;
         });
       } else {
-        throw Exception('Failed to load data');
+        throw Exception('Failed to load pemasok');
       }
     } catch (e) {
       setState(() {
@@ -37,28 +45,22 @@ class _StafHomeState extends State<StafHome> {
   }
 
   @override
-  void initState() {
-    super.initState();
-    fetchStaf();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DATA STAF APOTEK 👨‍⚕️',
+        title: const Text('DAFTAR PEMASOK OBAT 🫂💊',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-        backgroundColor: Colors.lightGreen[400]!,
+        backgroundColor: Colors.lightBlue[400],
         elevation: 0,
       ),
       body: isLoading
           ? Center(
-              child: CircularProgressIndicator(color: Colors.lightGreen[400]!))
+              child: CircularProgressIndicator(color: Colors.lightBlue[400]))
           : ListView.builder(
-              itemCount: stafList.length,
+              itemCount: pemasokList.length,
               itemBuilder: (context, index) {
                 return Card(
-                  color: Colors.lightGreen[400]!,
+                  color: Colors.lightBlue.shade100,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
@@ -68,32 +70,28 @@ class _StafHomeState extends State<StafHome> {
                     contentPadding:
                         EdgeInsets.symmetric(vertical: 10, horizontal: 16),
                     leading: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Icon(Icons.person, color: Colors.black),
+                      backgroundColor: Colors.lightBlue[700],
+                      child: Icon(Icons.location_city, color: Colors.white),
                     ),
                     title: Text(
-                      stafList[index]['nama'],
+                      pemasokList[index]['nama_perusahaan'],
                       style: TextStyle(
                           fontWeight: FontWeight.w600,
                           fontSize: 16,
-                          color: Colors.green[800]),
+                          color: Colors.lightBlue[700]),
                     ),
                     subtitle: Text(
-                      stafList[index]['no_hp'],
+                      pemasokList[index]['no_kontak'],
                       style: TextStyle(fontSize: 14, color: Colors.grey[700]),
                     ),
+                    trailing: Icon(Icons.arrow_forward_ios,
+                        color: Colors.lightBlue[400]),
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailStafScreen(
-                            id: stafList[index]['id'].toString(),
-                            nama: stafList[index]['nama'],
-                            alamat: stafList[index]['alamat'],
-                            tglLahir: stafList[index]['tgl_lahir'],
-                            tmpLahir: stafList[index]['tmp_lahir'],
-                            noHp: stafList[index]['no_hp'],
-                          ),
+                          builder: (context) =>
+                              DetailPemasokScreen(pemasok: pemasokList[index]),
                         ),
                       );
                     },
@@ -102,13 +100,13 @@ class _StafHomeState extends State<StafHome> {
               },
             ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.lightGreen[400]!,
-        child: Icon(Icons.add, color: Colors.white),
+        backgroundColor: Colors.lightBlue[400],
+        child: const Icon(Icons.add, color: Colors.white),
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => AddStafScreen()),
-          );
+            MaterialPageRoute(builder: (context) => const AddPemasokScreen()),
+          ).then((_) => fetchPemasok());
         },
       ),
     );

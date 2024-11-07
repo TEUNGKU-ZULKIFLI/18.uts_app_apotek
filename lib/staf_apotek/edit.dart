@@ -93,11 +93,11 @@ class _EditStafScreenState extends State<EditStafScreen> {
         borderRadius: BorderRadius.circular(10),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.greenAccent),
+        borderSide: BorderSide(color: Colors.lightGreen[400]!),
         borderRadius: BorderRadius.circular(10),
       ),
       enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.greenAccent),
+        borderSide: BorderSide(color: Colors.lightGreen[400]!),
         borderRadius: BorderRadius.circular(10),
       ),
     );
@@ -108,7 +108,7 @@ class _EditStafScreenState extends State<EditStafScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Edit Staf Apotek'),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.lightGreen[400]!,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -175,7 +175,7 @@ class _EditStafScreenState extends State<EditStafScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
+                  backgroundColor: Colors.lightGreen[400]!,
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 ),
                 onPressed: _updateStaf,

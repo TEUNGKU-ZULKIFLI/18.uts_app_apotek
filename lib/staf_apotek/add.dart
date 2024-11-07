@@ -46,12 +46,12 @@ class _AddStafScreenState extends State<AddStafScreen> {
     return InputDecoration(
       labelText: labelText,
       labelStyle: TextStyle(color: Colors.black),
-      prefixIcon: Icon(icon, color: Colors.greenAccent),
+      prefixIcon: Icon(icon, color: Colors.lightGreen[400]!),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.greenAccent),
+        borderSide: BorderSide(color: Colors.lightGreen[400]!),
         borderRadius: BorderRadius.circular(10),
       ),
       enabledBorder: OutlineInputBorder(
@@ -67,7 +67,7 @@ class _AddStafScreenState extends State<AddStafScreen> {
       appBar: AppBar(
         title:
             Text('Tambah Staf Apotek', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.lightGreen[400]!,
         elevation: 0,
       ),
       body: Padding(
@@ -121,7 +121,7 @@ class _AddStafScreenState extends State<AddStafScreen> {
               SizedBox(height: 20),
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
+                  backgroundColor: Colors.lightGreen[400]!,
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 ),
                 onPressed: _addStaf,

@@ -84,11 +84,11 @@ class _EditObatScreenState extends State<EditObatScreen> {
         borderRadius: BorderRadius.circular(10),
       ),
       focusedBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.greenAccent),
+        borderSide: BorderSide(color: Colors.teal[400]!),
         borderRadius: BorderRadius.circular(10),
       ),
       enabledBorder: OutlineInputBorder(
-        borderSide: BorderSide(color: Colors.greenAccent),
+        borderSide: BorderSide(color: Colors.teal[400]!),
         borderRadius: BorderRadius.circular(10),
       ),
     );
@@ -99,7 +99,7 @@ class _EditObatScreenState extends State<EditObatScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Edit Obat'),
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.teal[400]!,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -143,7 +143,7 @@ class _EditObatScreenState extends State<EditObatScreen> {
               SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
+                  backgroundColor: Colors.teal[400]!,
                   padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
                 ),
                 onPressed: _updateObat,
