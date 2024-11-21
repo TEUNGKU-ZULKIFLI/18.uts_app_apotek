@@ -48,7 +48,7 @@ class _PemasokObatHomeState extends State<PemasokObatHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('DAFTAR PEMASOK OBAT 🫂💊',
+        title: const Text('DAFTAR PEMASOK OBAT 🏭',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.lightBlue[400],
         elevation: 0,

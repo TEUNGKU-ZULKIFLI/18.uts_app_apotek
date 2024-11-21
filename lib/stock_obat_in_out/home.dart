@@ -100,7 +100,7 @@ class _StockObatHomeState extends State<StockObatHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('STOK OBAT MASUK - KELUAR',
+        title: Text('STOK OBAT IN OUT 📦',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         backgroundColor: Colors.redAccent[400],
         elevation: 0,

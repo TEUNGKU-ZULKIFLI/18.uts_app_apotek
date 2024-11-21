@@ -74,3 +74,17 @@ Jangan lupa, saat kamu berhasil mengelola apotekmu dengan aplikasi ini, bagikan 
 - **PENBARUAN TABLE DI DATABASE:** https://drive.google.com/file/d/1vfCqsOi5hcH142lH616_t3581IpccRNq/view
 
 ---
+
+# UPDATE V.2.1
+- **Pembaruan ini cuma merelasikan tabel yang diperlukan serta Kejelasan di fitur Lihat Stock Obat dan fitur ini diperuntukkan untuk si apotek mencari / melihat apakah ada gak tuh stock obat yang masih di tangan kurir kah atau mungkin kamu yang gak jadi masok obatnya 🤣**
+
+# SHOWCASE V.2.1
+<div align="center">
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.28.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.29.png" width="200px"/>
+  <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.30.png" width="200px"/>
+</div>
+
+# COMPONENT 💾 YANG DI PERBARUKAN V.2.1
+- **PEMBARUAN SEBUAH FOLDER DIHTDOCK:** https://drive.google.com/file/d/1UC8WokTrph5LJ8fIv9gFGm6VmLB4WVW-/view
+- **PENBARUAN TABLE DI DATABASE:** https://drive.google.com/file/d/1NON0Oob7AAQGlXIrgxlJTCX-nX7pI5oC/view

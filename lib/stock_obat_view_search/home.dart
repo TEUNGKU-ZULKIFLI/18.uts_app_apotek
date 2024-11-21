@@ -11,9 +11,11 @@ class _StockObatViewHomeState extends State<StockObatViewHome> {
   List<dynamic> _listObat = [];
   List<dynamic> _listStock = [];
   String? selectedKodeObat;
-  int jumlahStokDiRak = 0;
+  int jumlahStokMasuk = 0;
+  int diRak = 0;
   int jumlahStokDipesan = 0;
   int sisaStok = 0;
+  bool isButtonPressed = false; // Tambahkan variabel ini
 
   @override
   void initState() {
@@ -48,20 +50,23 @@ class _StockObatViewHomeState extends State<StockObatViewHome> {
 
   void _calculateSisaStok() {
     final stock = _listStock.firstWhere(
-        (item) => item['kode_obat'] == selectedKodeObat,
+        (item) => item['kode_obat'].toString() == selectedKodeObat,
         orElse: () => null);
 
     setState(() {
       if (stock != null) {
-        jumlahStokDiRak =
+        jumlahStokMasuk =
             int.tryParse(stock['jumlah_obat_masuk'].toString()) ?? 0;
+        diRak = int.tryParse(stock['no_rak_obat'].toString()) ?? 0;
         jumlahStokDipesan =
-            int.tryParse(stock['jumlah_obat_dipesan'].toString()) ?? 0;
+            int.tryParse(stock['jumlah_pesanan_obat'].toString()) ?? 0;
       } else {
-        jumlahStokDiRak = 0;
+        jumlahStokMasuk = 0;
+        diRak = 0;
         jumlahStokDipesan = 0;
       }
-      sisaStok = jumlahStokDiRak - jumlahStokDipesan;
+      sisaStok = jumlahStokMasuk - jumlahStokDipesan;
+      isButtonPressed = true; // Setel ke true saat tombol "Cek" ditekan
     });
   }
 
@@ -69,20 +74,17 @@ class _StockObatViewHomeState extends State<StockObatViewHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Lihat Stok Obat", style: TextStyle(color: Colors.white)),
+        title:
+            Text("LIHAT STOCK OBAT 🔎", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.purpleAccent[400],
       ),
       body: Center(
-        // Menggunakan Center untuk menengahkan konten
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
-            // Memungkinkan scrolling jika konten melebihi layar
             child: Column(
-              mainAxisSize: MainAxisSize
-                  .min, // Membuat kolom sesuai dengan ukuran minimum
-              crossAxisAlignment:
-                  CrossAxisAlignment.center, // Menengahkan konten
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 DropdownButton<String>(
                   hint: Text("Pilih Kode Obat"),
@@ -90,7 +92,7 @@ class _StockObatViewHomeState extends State<StockObatViewHome> {
                   onChanged: (String? newValue) {
                     setState(() {
                       selectedKodeObat = newValue;
-                      _calculateSisaStok();
+                      isButtonPressed = false; // Reset saat pilihan berubah
                     });
                   },
                   items: _listObat.map<DropdownMenuItem<String>>((item) {
@@ -112,15 +114,21 @@ class _StockObatViewHomeState extends State<StockObatViewHome> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Jumlah Stok Obat di Rak: $jumlahStokDiRak",
+                        Text("Jumlah Stok Obat Masuk: $jumlahStokMasuk",
                             style: TextStyle(fontSize: 16)),
+                        SizedBox(height: 10),
+                        Text("Di Rak: $diRak", style: TextStyle(fontSize: 16)),
                         SizedBox(height: 10),
                         Text("Jumlah Stok Obat Dipesan: $jumlahStokDipesan",
                             style: TextStyle(fontSize: 16)),
                         SizedBox(height: 10),
-                        Text("Sisa Stok Obat: $sisaStok",
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold)),
+                        // Tampilkan "Sisa Stok Obat" hanya jika tombol "Cek" sudah ditekan
+                        Visibility(
+                          visible: isButtonPressed,
+                          child: Text("Sisa Obat: $sisaStok",
+                              style: TextStyle(
+                                  fontSize: 20, fontWeight: FontWeight.bold)),
+                        ),
                       ],
                     ),
                   ),
@@ -131,7 +139,7 @@ class _StockObatViewHomeState extends State<StockObatViewHome> {
                   child: Text("Cek"),
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.purpleAccent[400], // Warna tombol
+                    backgroundColor: Colors.purpleAccent[400],
                   ),
                 ),
               ],
