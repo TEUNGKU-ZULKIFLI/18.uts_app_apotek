@@ -41,10 +41,6 @@ Jangan lupa, saat kamu berhasil mengelola apotekmu dengan aplikasi ini, bagikan 
   <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.16.png" width="200px"/>
 </div>
 
-# COMPONENT 💾 YANG DI PERLUKAN
-- **PEMBUATAN SEBUAH FODER DI HTDOCK:** https://drive.google.com/file/d/1VPnh88FM_wlDLBBQyupmCOjVafUJhxGn/view
-- **PEMBUATAN TABLE DI DATABASE:** https://drive.google.com/file/d/1VgDnDtwf-hi2iib9I9mmSHwbJZq577wa/view
-
 ---
 
 # PENAMBAHAN 3 FITUR
@@ -69,10 +65,6 @@ Jangan lupa, saat kamu berhasil mengelola apotekmu dengan aplikasi ini, bagikan 
   <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.27.png" width="200px"/>
 </div>
 
-# COMPONENT 💾 YANG DI PERLUKAN V.2
-- **PEMBARUAN SEBUAH FOLDER DIHTDOCK:** https://drive.google.com/file/d/1zhv4P9EXxf5V0u6CcWaGkst6FBe4DCZK/view
-- **PENBARUAN TABLE DI DATABASE:** https://drive.google.com/file/d/1vfCqsOi5hcH142lH616_t3581IpccRNq/view
-
 ---
 
 # UPDATE V.2.1
@@ -85,6 +77,9 @@ Jangan lupa, saat kamu berhasil mengelola apotekmu dengan aplikasi ini, bagikan 
   <img src="https://raw.githubusercontent.com/TEUNGKU-ZULKIFLI/PROJECT-FLUTTER/refs/heads/master/asset/img/018.30.png" width="200px"/>
 </div>
 
-# COMPONENT 💾 YANG DI PERBARUKAN V.2.1
-- **PEMBARUAN SEBUAH FOLDER DIHTDOCK:** https://drive.google.com/file/d/1UC8WokTrph5LJ8fIv9gFGm6VmLB4WVW-/view
-- **PENBARUAN TABLE DI DATABASE:** https://drive.google.com/file/d/1NON0Oob7AAQGlXIrgxlJTCX-nX7pI5oC/view
+# COMPONENT 💾 YANG DI PERLUKAN 
+- Penghubung antar flutter ke mysql/phpmyadmin yang di xampp
+- Code SQL untuk Create DB dan TB
+<div align="center">
+  <a href="https://github.com/TEUNGKU-ZULKIFLI/api_apotek"><button style="font-size: 18px; padding: 10px 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">REPO API APOTEK</button></a>
+</div>
